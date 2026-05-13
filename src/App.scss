@@ -1,0 +1,47 @@
+/* 1. RESET GLOBAL: Quita los espacios que el navegador pone por defecto */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* 2. CUERPO DE LA WEB: Aquí definimos el look "Cinephile" */
+
+body {
+    background-color: #05050a;
+    /* Negro azulado muy oscuro */
+    color: #ffffff;
+    /* Texto blanco para que se lea bien */
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    /* Evita que la página se mueva hacia los lados */
+}
+
+
+/* 3. CONTENEDOR PRINCIPAL: Asegura que el contenido ocupe el espacio necesario */
+
+#root {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* 4. ESPACIADO PARA EL CONTENIDO: Para que nada quede debajo del Header */
+
+main {
+    flex: 1;
+    padding-top: 80px;
+    /* Ajusta esto según la altura de tu Header */
+}
+
+
+/* 5. ESTILO PARA ENLACES: Quita el subrayado feo de los links */
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
