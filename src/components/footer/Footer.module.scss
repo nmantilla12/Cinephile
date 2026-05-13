@@ -1,0 +1,79 @@
+@import "../../style/variables";
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.8rem;
+  color: $gray;
+  text-transform: uppercase;
+  font-family: $font-secondary;
+  opacity: 70%;
+  letter-spacing: 1px;
+}
+
+.logo {
+  color: $cyan;
+  font-weight: bold;
+}
+
+.subtitle {
+    display: none;
+}
+
+.linksTop {
+  display: flex;
+  padding: 10px;
+  gap: 20px;
+}
+
+.linksBottom {
+  display: flex;
+  padding: 10px;
+  gap: 20px;
+}
+
+.copy {
+  padding-inline: 2rem;
+  padding-block: 1rem;
+  text-align: center;
+}
+.icons {
+  display: none;
+}
+
+@media (min-width: 880px) {
+  .footer {
+    flex-direction: row;
+    padding: 1rem;
+    margin: 0 auto;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .title {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .links {
+    display: flex;
+  }
+  .subtitle {
+    display: flex;
+  }
+
+  .firstPart {
+    display: none;
+  }
+
+  .copy {
+    display: none;
+  }
+  .icons {
+    display: flex;
+    gap: 10px;
+    opacity: 70%;
+  }
+}
