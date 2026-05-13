@@ -1,0 +1,22 @@
+@import "../../style/variables";
+
+.headerCinephile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 80px;
+}
+
+.headerLogo h1 {
+  color: $cyan;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+}
+

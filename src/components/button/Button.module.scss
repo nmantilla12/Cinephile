@@ -1,0 +1,34 @@
+@import "../../style/variables";
+
+.button {
+  font-family: $font-secondary;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.8rem 1.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  font-size: 0.9rem;
+}
+
+/* VARIANTE 1: fondo cyan */
+.primary {
+  background-color: $cyan;
+  color: $blue;
+  border: none;
+
+  &:hover {
+    opacity: 0.85;
+  }
+}
+
+/* VARIANTE 2: fondo transparente + borde cyan */
+.outline {
+  background-color: transparent;
+  border: 1px solid $cyan;
+  color: $cyan;
+
+  &:hover {
+    background-color: rgba($cyan, 0.1);
+  }
+}
