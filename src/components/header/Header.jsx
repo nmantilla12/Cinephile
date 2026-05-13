@@ -5,15 +5,17 @@ import Button from "../button/Button";
 
 export default function Header() {
   return (
-    <header className={styles.headerCinephile}>
-      <div className={styles.headerLogo}>
-        <h1>CINEPHILE</h1>
+    <header className={styles.header}>
+      <div className={styles.logo}>
+        <Link to="/">CINEPHILE</Link>
       </div>
 
       <Navbar />
 
-      <Button variant="primary">Get Access</Button>
-      <Button variant="outline">View Catalog</Button>
+      <div className={styles.actions}>
+        <button className={styles.signin}>Sign in</button>
+        <Button variant="primary">Get Access</Button>
+      </div>
     </header>
   );
 }

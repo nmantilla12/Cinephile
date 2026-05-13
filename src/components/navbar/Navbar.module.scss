@@ -1,23 +1,22 @@
 @import "../../style/variables";
 
-.headerNav {
+.nav {
   display: flex;
-  list-style: none;
   gap: 35px;
 }
 
-.navLink {
+.link {
   text-decoration: none;
-  color: $gray; 
+  color: $gray;
   font-size: 0.95rem;
   font-weight: 500;
-  transition: all 0.3s ease;
-  position: relative;
   padding: 10px 0;
+  position: relative;
+  transition: all 0.3s ease;
 
   &:hover,
   &.active {
-    color: $cyan; 
+    color: $cyan;
   }
 
   &.active::after {
@@ -29,5 +28,23 @@
     height: 2px;
     background-color: $cyan;
     box-shadow: 0px 0px 8px $cyan;
+  }
+}
+
+@media (max-width: 880px) {
+  .nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    justify-content: space-around;
+    padding: 15px 0;
+    background-color: $blue;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    z-index: 1001;
+  }
+
+  .link {
+    font-size: 0.85rem;
   }
 }

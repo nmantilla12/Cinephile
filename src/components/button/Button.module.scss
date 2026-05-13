@@ -11,7 +11,6 @@
   font-size: 0.9rem;
 }
 
-/* VARIANTE 1: fondo cyan */
 .primary {
   background-color: $cyan;
   color: $blue;
@@ -22,7 +21,6 @@
   }
 }
 
-/* VARIANTE 2: fondo transparente + borde cyan */
 .outline {
   background-color: transparent;
   border: 1px solid $cyan;

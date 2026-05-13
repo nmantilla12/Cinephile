@@ -1,22 +1,48 @@
 @import "../../style/variables";
 
-.headerCinephile {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 5%;
+  height: 80px;
   position: sticky;
   top: 0;
-  width: 100%;
   z-index: 1000;
-  height: 80px;
 }
 
-.headerLogo h1 {
+.logo a {
   color: $cyan;
   font-size: 1.5rem;
   font-weight: 800;
   letter-spacing: 1.5px;
-  cursor: pointer;
+  text-decoration: none;
 }
 
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Sign in button */
+.signin {
+  background: transparent;
+  border: none;
+  color: $offwhite;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $cyan;
+  }
+}
+
+/* MOBILE FIRST */
+@media (max-width: 880px) {
+  .actions {
+    display: none; // como en el diseño mobile
+  }
+}
