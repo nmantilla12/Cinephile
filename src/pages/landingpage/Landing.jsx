@@ -1,7 +1,9 @@
-export default function Landing () {
-    return (
-        <>
-        <section>Landing</section>
-        </>
-    )
+import Hero from "../../components/Hero/Hero";
+
+export default function Landing() {
+  return (
+    <>
+      <Hero />
+    </>
+  );
 }
