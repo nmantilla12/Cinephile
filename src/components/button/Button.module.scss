@@ -1,32 +1,145 @@
 @import "../../style/variables";
-
-.button {
-  font-family: $font-secondary;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  padding: 0.8rem 1.6rem;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: 0.2s ease;
-  font-size: 0.9rem;
+.contactPage {
+    background-color: #05060f;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 5%;
 }
 
-.primary {
-  background-color: $cyan;
-  color: $blue;
-  border: none;
-
-  &:hover {
-    opacity: 0.85;
-  }
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    gap: 60px;
+    align-items: center;
+    @media (max-width: 880px) {
+        flex-direction: column;
+        padding-bottom: 80px;
+    }
 }
 
-.outline {
-  background-color: transparent;
-  border: 1px solid $cyan;
-  color: $cyan;
+.infoSection {
+    flex: 1;
+    @media (max-width: 880px) {
+        display: none;
+    }
+    .overline {
+        color: $gray;
+        letter-spacing: 2px;
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+    .title {
+        color: white;
+        font-size: 4rem;
+        font-weight: 800;
+        line-height: 0.9;
+        margin: 15px 0;
+    }
+    .description {
+        color: $gray;
+        line-height: 1.6;
+        max-width: 400px;
+    }
+}
 
-  &:hover {
-    background-color: rgba($cyan, 0.1);
-  }
+.formCard {
+    flex: 1.2;
+    background-color: #12131e;
+    padding: 45px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    width: 100%;
+    @media (max-width: 880px) {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+    }
+}
+
+.mobileHeader {
+    display: none;
+    @media (max-width: 880px) {
+        display: block;
+        margin-bottom: 30px;
+        .mobileTitle {
+            color: $cyan;
+            font-size: 2.5rem;
+            margin: 0;
+        }
+        .mobileSubtitle {
+            color: white;
+            opacity: 0.8;
+            margin-top: 10px;
+        }
+    }
+}
+
+.desktopText {
+    @media (max-width: 880px) {
+        display: none;
+    }
+}
+
+.mobileText {
+    display: none;
+    @media (max-width: 880px) {
+        display: inline;
+    }
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+    label {
+        color: $cyan;
+        font-size: 0.75rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+    input,
+    textarea {
+        background: rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 15px;
+        color: white;
+        border-radius: 6px;
+        &:focus {
+            border-color: $cyan;
+            outline: none;
+        }
+    }
+}
+
+.row {
+    display: flex;
+    gap: 20px;
+    @media (max-width: 600px) {
+        flex-direction: column;
+        gap: 0;
+    }
+    .inputGroup {
+        flex: 1;
+    }
+}
+
+.formFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 480px) {
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+}
+
+.secureBadge {
+    color: #444655;
+    font-size: 0.7rem;
+    @media (max-width: 880px) {
+        display: none;
+    }
 }
