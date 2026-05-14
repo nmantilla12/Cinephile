@@ -9,3 +9,17 @@ body {
 h1,h2,h3,h4,h5,h6 {
   font-family: $font-secondary;
 }
+
+html, body {
+  height: 100%;
+}
+
+#root {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}

@@ -18,19 +18,21 @@
 }
 
 .subtitle {
-    display: none;
+  display: none;
 }
 
 .linksTop {
   display: flex;
   padding: 10px;
   gap: 20px;
+  justify-content: center;
 }
 
 .linksBottom {
   display: flex;
   padding: 10px;
   gap: 20px;
+  justify-content: center;
 }
 
 .copy {
@@ -45,9 +47,9 @@
 @media (min-width: 880px) {
   .footer {
     flex-direction: row;
-    padding: 1rem;
-    margin: 0 auto;
-    justify-content: space-around;
+    padding: 20px 5%;
+    height: 80px; 
+    justify-content: space-between;
     align-items: center;
   }
 
