@@ -13,12 +13,8 @@ export default function Hero() {
           cinephiles.
         </p>
         <div className={style.buttonsContainer}>
-          <Button variant="primary" >
-            Get Access
-          </Button>
-          <Button variant="outline" >
-            View Catalog
-          </Button>
+          <Button variant="primary">Get Access</Button>
+          <Button variant="outline">View Catalog</Button>
         </div>
       </section>
     </>
