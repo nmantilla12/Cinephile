@@ -1,4 +1,7 @@
 import PriceCard from "../../components/priceCard/PriceCard";
+import styles from "./Prices.module.scss";
+import checkIcon from "../../assets/images/icons/check.png";
+import starIcon from "../../assets/images/icons/star.png";
 
 export default function Prices() {
   const plans = [
@@ -11,6 +14,8 @@ export default function Prices() {
         "1 Concurrent Screen",
         "Ad-Supported Library",
       ],
+      icon: checkIcon,
+      buttonVariant: "outline"
     },
     {
       subtitle: "Most Popular",
@@ -20,8 +25,10 @@ export default function Prices() {
         "4K Ultra HD + HDR",
         "2 Concurrent Screens",
         "No Commercial Breaks",
-        "Spatiall Audio Support",
+        "Spatial Audio Support",
       ],
+      icon: checkIcon,
+      buttonVariant: "outline"
     },
     {
       subtitle: "Elite Choice",
@@ -33,28 +40,26 @@ export default function Prices() {
         "Early Access Premieres",
         "Dolby Atmos Mastering",
       ],
+      icon: starIcon,
+      badge: "BEST VALUE",
+      buttonVariant: "primary"
     },
   ];
 
   return (
     <>
       <section>
-        <h4>Pricing</h4>
-        <h1>Choose your lens</h1>
-        <p>
-          Precision-enginereed streaming for the ultimate cinematic experience.
-        </p>
-
-        <div className="pricingGrid">
+        <div className={styles.introduction}>
+          <h4 className={styles.badge}>Pricing</h4>
+          <h1 className={styles.title}>Choose your lens</h1>
+          <p className={styles.description}>
+            Precision-enginereed streaming for the ultimate cinematic
+            experience.
+          </p>
+        </div>
+        <div className={styles.pricingGrid}>
           {plans.map((plan, i) => (
-            <PriceCard
-              key={i}
-              subtitle={plan.subtitle}
-              title={plan.price}
-              price={plan.price}
-              features={plan.features}
-              highlight={plan.highlight}
-            />
+            <PriceCard key={i} {...plan} />
           ))}
         </div>
       </section>

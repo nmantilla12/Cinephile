@@ -8,25 +8,32 @@ export default function PriceCard({
   currency = "$",
   features,
   highlight,
+  icon,
+  badge,
+  buttonVariant
 }) {
   return (
-    <>
-      <div className={`${styles.card} ${highlight ? styles.highlight : ""}`}>
-        <h3>{subtitle}</h3>
-        <h2>{title}</h2>
+    <div className={`${styles.card} ${highlight ? styles.highlight : ""}`}>
+      {badge && <span className={styles.badgeRibbon}>{badge}</span>}
 
-        <p>{currency}{price}/mo</p>
+      <h3>{subtitle}</h3>
+      <h2>{title}</h2>
 
-        <ul>
-          {features.map((item, i) => (
-            <li key={i}>{item}</li>
-          ))}
-        </ul>
+      <p>
+        {currency}
+        {price} <span className={styles.monthly}>/mo</span>
+      </p>
 
-        <Button variant={highlight ? "primary" : "outline"}>
-          Select {title}
-        </Button>
-      </div>
-    </>
+      <ul>
+        {features.map((item, i) => (
+          <li key={i}>
+            <img src={icon} alt="" className={styles.icon} />
+            {item}
+          </li>
+        ))}
+      </ul>
+
+      <Button variant={buttonVariant}>Select {title}</Button>
+    </div>
   );
 }
