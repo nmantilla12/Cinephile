@@ -1,4 +1,5 @@
 import style from "./Hero.module.scss";
+import Button from "../Button/Button";
 export default function Hero() {
   return (
     <>
@@ -11,6 +12,14 @@ export default function Hero() {
           Precision-engineered streaming for the world's most dedicated
           cinephiles.
         </p>
+        <div className={style.buttonsContainer}>
+          <Button variant="primary" >
+            Get Access
+          </Button>
+          <Button variant="outline" >
+            View Catalog
+          </Button>
+        </div>
       </section>
     </>
   );
