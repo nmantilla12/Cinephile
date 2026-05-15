@@ -1,0 +1,61 @@
+@use "../../style/variables" as v;
+
+.introduction {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  align-items: center;
+  text-align: center;
+}
+
+.badge {
+  color: v.$pink;
+  font-family: v.$font-primary;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: 1px solid rgba(v.$pink, 0.3);
+  padding: 5px 10px;
+  border-radius: 20px;
+  margin-bottom: 32px;
+  background-color: rgba(v.$pink, 0.1);
+}
+
+.title {
+  text-transform: capitalize;
+}
+
+.description {
+  font-size: 0.85rem;
+  padding-block: 1rem;
+}
+
+.pricingGrid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1100px; 
+  margin: 0 auto; 
+  padding-inline: 2rem;
+}
+
+@media (min-width: 880px) {
+  .badge {
+    display: none;
+  }
+
+  .title {
+    text-transform: uppercase;
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+  .pricingGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    justify-content: center;
+  }
+}

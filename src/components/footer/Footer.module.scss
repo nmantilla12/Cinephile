@@ -1,19 +1,19 @@
-@import "../../style/variables";
+@use "../../style/variables" as v;
 
 .footer {
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 0.8rem;
-  color: $gray;
+  color: v.$gray;
   text-transform: uppercase;
-  font-family: $font-secondary;
+  font-family: v.$font-secondary;
   opacity: 70%;
   letter-spacing: 1px;
 }
 
 .logo {
-  color: $cyan;
+  color: v.$cyan;
   font-weight: bold;
 }
 

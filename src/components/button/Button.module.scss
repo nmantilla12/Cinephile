@@ -1,19 +1,20 @@
-@import "../../style/variables";
+@use "../../style/variables" as v;
 
 .button {
-  font-family: $font-secondary;
+  font-family: v.$font-secondary;
   text-transform: uppercase;
   letter-spacing: 1px;
   padding: 0.8rem 1.6rem;
   border-radius: 4px;
   cursor: pointer;
   transition: 0.2s ease;
-  font-size: 0.9rem;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .primary {
-  background-color: $cyan;
-  color: $blue;
+  background-color: v.$cyan;
+  color: v.$blue;
   border: none;
 
   &:hover {
@@ -23,10 +24,10 @@
 
 .outline {
   background-color: transparent;
-  border: 1px solid $cyan;
-  color: $cyan;
+  border: 1px solid v.$cyan;
+  color: v.$cyan;
 
   &:hover {
-    background-color: rgba($cyan, 0.1);
+    background-color: rgba(v.$cyan, 0.1);
   }
 }

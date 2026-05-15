@@ -1,4 +1,4 @@
-@import "../../style/variables";
+@use "../../style/variables" as v;
 
 .header {
   display: flex;
@@ -6,13 +6,12 @@
   align-items: center;
   padding: 20px 5%;
   height: 80px;
-  position: sticky;
   top: 0;
   z-index: 1000;
 }
 
 .logo a {
-  color: $cyan;
+  color: v.$cyan;
   font-size: 1.5rem;
   font-weight: 800;
   letter-spacing: 1.5px;
@@ -25,24 +24,22 @@
   gap: 20px;
 }
 
-/* Sign in button */
 .signin {
   background: transparent;
   border: none;
-  color: $offwhite;
+  color: v.$offwhite;
   font-size: 0.95rem;
   font-weight: 500;
   cursor: pointer;
   transition: color 0.3s ease;
 
   &:hover {
-    color: $cyan;
+    color: v.$cyan;
   }
 }
 
-/* MOBILE FIRST */
 @media (max-width: 880px) {
   .actions {
-    display: none; // como en el diseño mobile
+    display: none; 
   }
 }
