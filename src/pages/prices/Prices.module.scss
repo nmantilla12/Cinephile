@@ -1,4 +1,4 @@
-@import "../../style/variables";
+@use "../../style/variables" as v;
 
 .introduction {
   display: flex;
@@ -9,16 +9,16 @@
 }
 
 .badge {
-  color: $pink;
-  font-family: $font-primary;
+  color: v.$pink;
+  font-family: v.$font-primary;
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-  border: 1px solid rgba($pink, 0.3);
+  border: 1px solid rgba(v.$pink, 0.3);
   padding: 5px 10px;
   border-radius: 20px;
   margin-bottom: 32px;
-  background-color: rgba($pink, 0.1);
+  background-color: rgba(v.$pink, 0.1);
 }
 
 .title {

@@ -1,9 +1,9 @@
-@import "../../style/variables";
+@use "../../style/variables" as v;
 
 .card {
   position: relative;
-  background: rgba($gray, 0.05);
-  border: 1px solid rgba($gray, 0.2);
+  background: rgba(v.$gray, 0.05);
+  border: 1px solid rgba(v.$gray, 0.2);
   border-radius: 12px;
   padding: 2rem;
   margin: 1rem;
@@ -19,20 +19,20 @@
 
   &:hover {
     transform: translateY(-6px);
-    border-color: $cyan;
-    box-shadow: 0 0 20px rgba($cyan, 0.25);
+    border-color: v.$cyan;
+    box-shadow: 0 0 20px rgba(v.$cyan, 0.25);
   }
 }
 
 .highlight {
-  border-color: $cyan;
-  box-shadow: 0 0 25px rgba($cyan, 0.35);
+  border-color: v.$cyan;
+  box-shadow: 0 0 25px rgba(v.$cyan, 0.35);
 }
 
 /* SUBTITLE */
 .card h3 {
   font-size: 0.7rem;
-  color: $gray;
+  color: v.$gray;
   text-transform: uppercase;
   letter-spacing: 1px;
   opacity: 0.9;
@@ -42,7 +42,7 @@
 .card h2 {
   font-size: 1.8rem;
   font-weight: 700;
-  color: $offwhite;
+  color: v.$offwhite;
   text-transform: uppercase;
 }
 
@@ -50,13 +50,13 @@
 .card p {
   font-size: 2rem;
   font-weight: 600;
-  color: $cyan;
+  color: v.$cyan;
   padding-block: 1rem;
 }
 
 .monthly {
   font-size: 0.9rem;
-  color: $gray;
+  color: v.$gray;
   font-weight: 400;
 }
 
@@ -85,7 +85,7 @@
 }
 
 .card li {
-  color: $gray;
+  color: v.$gray;
   font-size: 0.95rem;
   opacity: 0.9;
 }
@@ -103,13 +103,13 @@
   position: absolute;
   top: 18px;
   right: -28px;
-  background: $fuchsia;
-  color: $offwhite;
+  background: v.$fuchsia;
+  color: v.$offwhite;
   font-size: 0.45rem;
   font-weight: 700;
   padding: 6px 32px;
   text-transform: uppercase;
   transform: rotate(45deg);
   letter-spacing: 1px;
-  box-shadow: 0 0 12px rgba($fuchsia, 0.4);
+  box-shadow: 0 0 12px rgba(v.$fuchsia, 0.4);
 }
